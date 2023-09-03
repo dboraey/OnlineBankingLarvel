@@ -6,7 +6,8 @@ CREATE USER OnlineBanking
 -- Grant necessary privileges to the new schema
 GRANT CONNECT, RESOURCE TO OnlineBanking;
 GRANT CREATE TABLE TO OnlineBanking;
-
+-- Grant SELECT, UPDATE, and INSERT privileges to all tables in a schema
+GRANT SELECT, UPDATE, INSERT ON OnlineBanking.* TO OnlineBanking;
 
 -- Create the "users" table
 CREATE TABLE users (
